@@ -1,0 +1,38 @@
+﻿@page
+@model  AgroNuevo.Frontend.Pages.ManoDeObraModel
+@{
+}
+<h>INGRESAR DATOS DE MANO DE OBRA</h>
+
+<table class="table">
+    @foreach (var ManoDeObra in Model.ManoDeObra)
+    {
+        <tr>
+            <td>@ManoDeObra.cargo </td>
+            <td>@ManoDeObra.salario </td>
+           
+            <td>
+                <a class = "btn btn-primary table-btn" asp-page="./Details" asp-route-ManoDeObraId="@ManoDeObra.Id">
+                    <i class="fas fa-info-circle fa-lg" ></i>
+                </a>                
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-ManoDeObra="@ManoDeObra.Id">
+                <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                </a>
+              
+            </td>
+        </tr>
+        
+    }
+
+
+
+
+
+</table>
+<a asp-page="./EditManoDeObra" class="btn btn-primary">Adicionar INFORMACION MANO DE OBRA </a>
+
+<div class = "btn-item">  
+       <center>  <a href="/MisPaginas/Registro" class="btn-ghost round"> Crear Usuario</a></center>
+     </div>

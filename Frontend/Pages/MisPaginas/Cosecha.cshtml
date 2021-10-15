@@ -1,0 +1,39 @@
+﻿@page
+@model Frontend.Pages.CosechaModel
+@{
+}
+<h>INGRESAR DATOS DE LA COSECHA</h>
+
+<table class="table">
+    @foreach (var Cosecha in Model.Cosecha)
+    {
+        <tr>
+            <td>@Cosecha.cargo </td>
+            <td>@Cosecha.salario </td>
+            <td>@Cosecha.codigoCosecha </td>
+           
+            <td>
+                <a class = "btn btn-primary table-btn" asp-page="./Details" asp-route-CosechaId="@Cosecha.Id">
+                    <i class="fas fa-info-circle fa-lg" ></i>
+                </a>                
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-Cosecha="@Cosecha.Id">
+                <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                </a>
+              
+            </td>
+        </tr>
+        
+    }
+
+
+
+
+
+</table>
+<a asp-page="./Edit" class="btn btn-primary">Adicionar INFORMACION DE LA COSECHA </a>
+
+<div class = "btn-item">  
+       <center>  <a href="/MisPaginas/Registro" class="btn-ghost round"> Crear Usuario</a></center>
+     </div>

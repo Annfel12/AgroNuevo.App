@@ -1,0 +1,16 @@
+﻿@page
+@model Frontend.Pages.DetailsCosechaModel
+@{
+}
+<h2>DATOS DE LA COSECHA</h2>
+
+<div>
+    cargo : @Model.Cosecha.cargo
+</div>
+<div>
+    salario  : @Model.Cosecha.salario
+</div>
+<div>
+   codigoCosecha: @Model.Cosecha.codigoCosecha
+</div>
+<a asp-page=".List" class="btn-default">Volver a Finca</a>

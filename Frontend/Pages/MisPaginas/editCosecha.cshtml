@@ -1,0 +1,30 @@
+﻿@page
+@model Frontend.Pages.editCosechaModel
+@{
+ int CosechaId=Model.Cosecha.Id;
+}
+<h2>Editar Cosecha</h2>
+<form method="post">
+    <input type="hidden" asp-for="Cosecha.Id"/>
+
+        <div class="for-group">
+        <label asp-for="Cosecha.cargo"></label>
+        <input asp-for="Cosecha.cargo" class="form-control">
+        <span class="text-danger" asp-validation-for="Cosecha.cargo"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="Cosecha.salario"></label>
+        <input asp-for="Cosecha.salario" class="form-control">
+        <span class="text-danger" asp-validation-for="Cosecha.salario"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="Cosecha.codigoCosecha"></label>
+        <input asp-for="Cosecha.codigoCosecha" class="form-control">
+        <span class="text-danger" asp-validation-for="Cosecha.codigoCosecha"></span>        
+   
+     <button type="submit" class="btn btn-primary">Guardar</button>
+     <a href="/MisPaginas/Cosecha" class="btn-ghost secondary round"> Volver</a>
+
+</form>
+
+

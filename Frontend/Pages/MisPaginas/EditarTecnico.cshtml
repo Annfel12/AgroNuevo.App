@@ -1,0 +1,29 @@
+﻿@page
+@model Frontend.Pages.EditarTecnicoModel
+@{
+ int TecnicoId=Model.Tecnico.Id;
+}
+<h2>Editar Tecnico</h2>
+<form method="post">
+    <input type="hidden" asp-for="Tecnico.Id"/>
+
+        <div class="for-group">
+        <label asp-for="Tecnico.cargo"></label>
+        <input asp-for="Tecnico.cargo" class="form-control">
+        <span class="text-danger" asp-validation-for="Tecnico.cargo"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="Tecnico.salario"></label>
+        <input asp-for="Tecnico.salario" class="form-control">
+        <span class="text-danger" asp-validation-for="Tecnico.salario"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="Tecnico.codigoTecnico"></label>
+        <input asp-for="Tecnico.codigoTecnico" class="form-control">
+        <span class="text-danger" asp-validation-for="Tecnico.codigoTecnico"></span>        
+   
+     <button type="submit" class="btn btn-primary">Guardar</button>
+     <a href="/MisPaginas/Tecnico" class="btn-ghost secondary round"> Volver</a>
+
+</form>
+

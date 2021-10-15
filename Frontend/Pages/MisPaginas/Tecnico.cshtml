@@ -1,0 +1,39 @@
+﻿@page
+@model Frontend.Pages.TecnicoModel
+@{
+}
+<h>INGRESAR DATOS DEL TECNICO</h>
+
+<table class="table">
+    @foreach (var Tecnico in Model.Tecnico)
+    {
+        <tr>
+            <td>@Tecnico.cargo </td>
+            <td>@Tecnico.salario </td>
+            <td>@Tecnico.codigoTecnico </td>
+           
+            <td>
+                <a class = "btn btn-primary table-btn" asp-page="./Details" asp-route-TecnicoId="@Tecnico.Id">
+                    <i class="fas fa-info-circle fa-lg" ></i>
+                </a>                
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-Tecnico="@Tecnico.Id">
+                <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                </a>
+              
+            </td>
+        </tr>
+        
+    }
+
+
+
+
+
+</table>
+<a asp-page="./Edit" class="btn btn-primary">Adicionar INFORMACION tecnico </a>
+
+<div class = "btn-item">  
+       <center>  <a href="/MisPaginas/Registro" class="btn-ghost round"> Crear Usuario</a></center>
+     </div>

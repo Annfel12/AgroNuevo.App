@@ -1,0 +1,17 @@
+﻿@page
+@model Frontend.Pages.DetailsTecnicoModel
+@{
+}
+<h2>DATOS DEL TECNICO</h2>
+
+<div>
+    cargo : @Model.Tecnico.cargo
+</div>
+<div>
+    salario  : @Model.Tecnico.salario
+</div>
+<div>
+   codigoTecnico: @Model.Tecnico.codigoTecnico
+</div>
+<a asp-page=".List" class="btn-default">Volver a Finca</a>
+

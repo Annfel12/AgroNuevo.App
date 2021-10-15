@@ -1,0 +1,15 @@
+﻿@page
+@model AgroNuevo.App.Frontend.Pages.DetailsManoDeObraModel
+@{
+}
+<h2>DATOS DE LA MANO DE OBRA</h2>
+
+<div>
+    cargo : @Model.ManoDeObra.cargo
+</div>
+<div>
+    salario  : @Model.ManoDeObra.salario
+</div>
+
+<a asp-page=".List" class="btn-default">Volver a Finca</a>
+

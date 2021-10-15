@@ -1,0 +1,28 @@
+﻿@page
+@model AgroNuevo.App.Frontend.Pages.EditManoDeObraModel
+@{
+int ManoDeObraId=Model.ManoDeObra.Id;
+}
+<h2>Editar ManoDeObra</h2>
+<form method="post">
+    <input type="hidden" asp-for="ManoDeObra.Id"/>
+
+        <div class="for-group">
+        <label asp-for="ManoDeObra.cargo"></label>
+        <input asp-for="ManoDeObra.cargo" class="form-control">
+        <span class="text-danger" asp-validation-for="ManoDeObra.cargo"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="ManoDeObra.salario"></label>
+        <input asp-for="ManoDeObra.salario" class="form-control">
+        <span class="text-danger" asp-validation-for="ManoDeObra.salario"></span>        
+            
+   
+     <button type="submit" class="btn btn-primary">Guardar</button>
+     <a href="/MisPaginas/ManoDeObra" class="btn-ghost secondary round"> Volver</a>
+
+</form>
+
+
+
+

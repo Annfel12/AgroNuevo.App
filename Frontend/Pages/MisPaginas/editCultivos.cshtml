@@ -1,0 +1,31 @@
+﻿@page
+@model Frontend.Pages.editCultivosModel
+@{
+int CultivosId=Model.Cultivos.Id;
+}
+<h2>Editar Cultivos</h2>
+<form method="post">
+    <input type="hidden" asp-for="Cultivos.Id"/>
+
+        <div class="for-group">
+        <label asp-for="Cultivos.cargo"></label>
+        <input asp-for="Cultivos.cargo" class="form-control">
+        <span class="text-danger" asp-validation-for="Cultivos.cargo"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="Cultivos.salario"></label>
+        <input asp-for="Cultivos.salario" class="form-control">
+        <span class="text-danger" asp-validation-for="Cultivos.salario"></span>        
+    </div>
+        <div class="for-group">
+        <label asp-for="Cultivos.codigoCarga"></label>
+        <input asp-for="Cultivos.codigoCarga" class="form-control">
+        <span class="text-danger" asp-validation-for="Cultivos.codigoCarga"></span>        
+   
+     <button type="submit" class="btn btn-primary">Guardar</button>
+     <a href="/MisPaginas/Cultivos" class="btn-ghost secondary round"> Volver</a>
+
+</form>
+
+
+
